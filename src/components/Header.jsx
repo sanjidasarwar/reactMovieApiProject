@@ -1,10 +1,10 @@
 function Header() {
   return (
-    <header className="py-4 bg-gray-900">
+    <header className="fixed top-3 left-0 right-0">
       <div className="md:container md:mx-auto">
         <div className="flex justify-between">
           <div>
-            <h3 className="text-[#f40b7e] text-2xl">Filmix</h3>
+            <h3 className="text-[#f40b7e] text-2xl font-extrabold">Filmix</h3>
           </div>
           <div className="flex">
             <form>
