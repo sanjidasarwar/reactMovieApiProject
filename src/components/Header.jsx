@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="fixed top-3 left-0 right-0">
+    <header className="absolute top-3 left-0 right-0">
       <div className="md:container md:mx-auto">
         <div className="flex justify-between">
           <div>
