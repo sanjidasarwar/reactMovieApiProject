@@ -2,7 +2,6 @@ import { IoMdStarOutline  } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
 
 function Movie({movie}) {
-    console.log(movie);
     const {id, original_title, poster_path, vote_count, vote_average} = movie
     const imgSrc = `https://image.tmdb.org/t/p/original/${poster_path}`
     return ( 

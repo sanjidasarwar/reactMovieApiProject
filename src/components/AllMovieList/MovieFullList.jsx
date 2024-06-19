@@ -1,11 +1,11 @@
 import MovieList from "./MovieList";
 
-function AllMovies() {
+function MovieFullList() {
     return ( 
         <section className="md:container md:mx-auto py-8">
-             <MovieList />
-        </section>
-    );
+            <MovieList />
+         </section>
+     );
 }
 
-export default AllMovies;
+export default MovieFullList;

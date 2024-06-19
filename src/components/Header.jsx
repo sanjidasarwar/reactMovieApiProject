@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Header() {
   return (
     <header className="absolute top-3 left-0 right-0">
@@ -123,10 +125,16 @@ function Header() {
           </div>
         </div>
         <div className="text-white flex justify-end pt-5">
-          <a href="" className="px-1.5  hover:text-[#f40b7e] transition-colors duration-700">Home</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/movie">Movie</NavLink>
+          <NavLink to="/tv">TV</NavLink>
+          <NavLink to="/celebrities">Celebrities</NavLink>
+
+
+          {/* <a href="" className="px-1.5  hover:text-[#f40b7e] transition-colors duration-700">Home</a>
           <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">Movie</a>
           <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">TV</a>
-          <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">Celebrities</a>
+          <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">Celebrities</a> */}
         </div>
       </div>
     </header>

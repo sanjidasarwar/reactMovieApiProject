@@ -1,4 +1,4 @@
-import AllMovies from "../components/AllMovieList/AllMovies";
+import AllMovies from "../components/AllMovieList/MovieSection";
 import Hero from "../components/Hero";
 
 function Home() {
