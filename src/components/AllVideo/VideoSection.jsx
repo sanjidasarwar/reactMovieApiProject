@@ -41,7 +41,7 @@ function VideoSection() {
 
     return ( 
         <section className="md:container md:mx-auto py-8">
-            <h3>Trailers and Videos</h3>
+            <h3 className="text-2xl font-bold text-white relative after:content-[''] after:absolute after:top-8 after:left-0 after:w-16 after:h-1 after:bg-white mb-8">Trailers and Videos</h3>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
               
                 {videosToShow.map((videoArray, index) => (
