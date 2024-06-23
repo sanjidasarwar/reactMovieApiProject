@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import useFetchData from "../../hooks/useFetchData";
 import Movie from "./Movie";
+import { Link } from "react-router-dom";
+
 
 function MovieList() {
   const { data } = useFetchData(
-    "https://api.themoviedb.org/3/discover/movie?api_key=38c57f89d17a1b837156825f22ed589a"
+    `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`
   );
-
-  console.log(data);
 
 const loadMoreData = ()=>{
   setMovieToShow(data?.results)
@@ -26,7 +26,9 @@ useEffect(()=>{
     <div>
       <div className="grid grid-cols-4 gap-4">
         {movieToShow?.map((movie) => (
-          <Movie movie={movie} key={movie.id} />
+          <Link to={`/movie/${movie.id}`} key={movie.id}>
+            <Movie movie={movie} key={movie.id} />
+          </Link>
         ))}
       </div>
       <div className="flex justify-center mt-5">

@@ -125,16 +125,43 @@ function Header() {
           </div>
         </div>
         <div className="text-white flex justify-end pt-5">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/movie">Movie</NavLink>
-          <NavLink to="/tv">TV</NavLink>
-          <NavLink to="/celebrities">Celebrities</NavLink>
-
-
-          {/* <a href="" className="px-1.5  hover:text-[#f40b7e] transition-colors duration-700">Home</a>
-          <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">Movie</a>
-          <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">TV</a>
-          <a href="" className="px-1.5 pl-7  hover:text-[#f40b7e] transition-colors duration-700">Celebrities</a> */}
+          <nav className="bg-gray-50 dark:bg-gray-700">
+            <div className="max-w-screen-xl px-4 py-3 mx-auto">
+              <div className="flex items-center">
+                <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                  <li>
+                    <NavLink to="/"
+                      className="text-gray-900 dark:text-white hover:underline"
+                      aria-current="page"
+                    >
+                      Home
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/movie"
+                      className="text-gray-900 dark:text-white hover:underline"
+                    >
+                      Movie
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/tv"
+                      className="text-gray-900 dark:text-white hover:underline"
+                    >
+                      TV
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/celebrities"
+                      className="text-gray-900 dark:text-white hover:underline"
+                    >
+                      Celebrities
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
     </header>

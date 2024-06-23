@@ -16,7 +16,7 @@ function VideoSection() {
 
         const [moviesId, setMoviesId] = useState([])
         const [videosToShow, setVideosToShow] = useState([])
-        console.log(videosToShow);
+        
 
     useEffect(() => {
         if (moviesId?.length > 0) {
