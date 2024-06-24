@@ -7,7 +7,7 @@ import Movie from './pages/Movie'
 import TV from './pages/TV'
 import Celebrities from './pages/Celebrities'
 import RootLayout from './pages/RootLayout.jsx';
-import MovieDetails from './components/AllMovieList/MovieDetails.jsx';
+import ItemDetails from './components/AllItems/ItemDetails';
 import CelebrityDetails from './components/Celebrities/CelebrityDetails.jsx';
 
 const router = createBrowserRouter(
@@ -17,12 +17,12 @@ const router = createBrowserRouter(
       <Route path="movie" element={<Movie />} />
       <Route 
               path="movie/:id" 
-              element={<MovieDetails type="movie" />}
+              element={<ItemDetails type="movie" />}
           />
       <Route path="tv" element={<TV />} />
       <Route 
               path="tv/:id" 
-              element={<MovieDetails type="tv" />}
+              element={<ItemDetails type="tv" />}
           />
       <Route path="celebrities" element={<Celebrities />} />
       <Route 

@@ -1,11 +1,9 @@
-// import Hero from "../components/Hero";
-
-import MovieSection from "../components/AllMovieList/MovieSection";
+import ItemSection from "../components/AllItems/ItemSection";
 
 function Movie() {
     return ( 
         <>
-            <MovieSection nav={true} type="movie" title="All Movies" />
+            <ItemSection title="All Movies" type="movie" />
         </>
      );
 }

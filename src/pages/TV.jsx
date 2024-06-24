@@ -1,10 +1,9 @@
-import MovieSection from "../components/AllMovieList/MovieSection";
+import ItemSection from "../components/AllItems/ItemSection";
 
 function TV() {
     return ( 
         <>
-            <MovieSection type="tv" title="All TV Shows" />
-
+            <ItemSection title="All TV Series" type="tv" />
         </>
      );
 }
