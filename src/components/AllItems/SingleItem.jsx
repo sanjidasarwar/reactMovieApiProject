@@ -2,7 +2,7 @@ import { IoMdStarOutline  } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
 
 function SingleItem({item}) {
-    console.log(item);
+    
     const {id, original_title, poster_path, vote_count, vote_average} = item
     const imgSrc = `https://image.tmdb.org/t/p/original/${poster_path}`
 
