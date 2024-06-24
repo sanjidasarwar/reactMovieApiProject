@@ -3,12 +3,12 @@ import Movie from "./Movie";
 import { Link, useNavigate } from "react-router-dom";
 
 
-function MovieList({showButton=false}) {
+function MovieList({showButton=false, type}) {
   const limitedMovieData =(fetchedData)=>{
     return fetchedData.results.slice(0,8)
   }
   const { data:movieToShow } = useFetchData(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`, showButton ? limitedMovieData : ''
+    `https://api.themoviedb.org/3/discover/${type}?api_key=${import.meta.env.VITE_API_KEY}`, showButton ? limitedMovieData : ''
   );
 
   const navigate = useNavigate()
@@ -20,7 +20,7 @@ function MovieList({showButton=false}) {
     <div>
       <div className="grid grid-cols-4 gap-4">
         {movies?.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
+          <Link to={`/${type}/${movie.id}`} key={movie.id}>
             <Movie movie={movie} key={movie.id} />
           </Link>
         ))}

@@ -1,8 +1,9 @@
+import MovieSection from "../components/AllMovieList/MovieSection";
 
 function TV() {
     return ( 
         <>
-                    <h3>TV</h3>
+            <MovieSection type="tv" title="All TV Shows" />
 
         </>
      );

@@ -4,7 +4,7 @@ import VideoSection from "../components/AllVideo/VideoSection";
 function Home() {
     return (  
        <>
-           <MovieSection showButton={true} />
+           <MovieSection showButton={true} type="movie" title="Movies" />
            <VideoSection />
        </>
     );

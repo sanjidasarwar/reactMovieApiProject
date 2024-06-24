@@ -8,6 +8,7 @@ import TV from './pages/TV'
 import Celebrities from './pages/Celebrities'
 import RootLayout from './pages/RootLayout.jsx';
 import MovieDetails from './components/AllMovieList/MovieDetails.jsx';
+import CelebrityDetails from './components/Celebrities/CelebrityDetails.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,11 +16,19 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="movie" element={<Movie />} />
       <Route 
-              path="movie/:movieId" 
-              element={<MovieDetails />}
+              path="movie/:id" 
+              element={<MovieDetails type="movie" />}
           />
       <Route path="tv" element={<TV />} />
+      <Route 
+              path="tv/:id" 
+              element={<MovieDetails type="tv" />}
+          />
       <Route path="celebrities" element={<Celebrities />} />
+      <Route 
+              path="celebrities/:id" 
+              element={<CelebrityDetails />}
+          />
     </Route>
   )
 );

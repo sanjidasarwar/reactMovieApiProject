@@ -4,18 +4,17 @@ import useFetchData from "../../hooks/useFetchData";
 import Backup from "../../assets/backup.png"
 
 
-function MovieDetails() {
+function MovieDetails({type}) {
     // const [movie, setMovie] = useState({});
-    const {movieId} = useParams()
+    const {id} = useParams()
     
     const { data:movie } = useFetchData(
-        `https://api.themoviedb.org/3/movie/${movieId}?api_key=${import.meta.env.VITE_API_KEY}`
+        `https://api.themoviedb.org/3/${type}/${id}?api_key=${import.meta.env.VITE_API_KEY}`
       );
       const image = movie?.poster_path ? `https://image.tmdb.org/t/p/w500/${movie?.poster_path}` : Backup ;
     // useEffect(()=>{
     //     setMovie(data)
     // }, [movieId])
-    console.log(movie);
     return ( 
         <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-sm">

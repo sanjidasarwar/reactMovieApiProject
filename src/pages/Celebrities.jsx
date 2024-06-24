@@ -1,8 +1,10 @@
+import CelebritySection from "../components/Celebrities/CelebritySection";
 
 function Celebrities() {
+   
     return ( 
         <>
-            <h1>Celebrities page</h1>
+            <CelebritySection />
 
          </>
      );
