@@ -1,7 +1,8 @@
+import { Outlet } from "react-router-dom";
 import ItemList from "./ItemList";
 import ItemNav from "./ItemNav";
 
-function ItemSection({title, type}) {
+function ItemSection({title}) {
     return ( 
         <section className="md:container md:mx-auto py-8">
         <div className="sectionHead flex justify-between mb-8">
@@ -10,8 +11,8 @@ function ItemSection({title, type}) {
           </h3>
             <ItemNav />
         </div>
-        <ItemList type={type} />
-        
+        {/* <ItemList type={type} api={api} /> */}
+        <Outlet />
       </section>
      );
 }
