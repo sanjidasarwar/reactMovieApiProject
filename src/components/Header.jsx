@@ -6,7 +6,7 @@ function Header() {
       <div className="md:container md:mx-auto">
         <div className="flex justify-between">
           <div>
-            <h3 className="text-[#f40b7e] text-2xl font-extrabold">Filmix</h3>
+            <h3 className="text-[#f40b7e] text-4xl font-extrabold">Filmix</h3>
           </div>
           <div className="flex">
             <form>
@@ -125,13 +125,13 @@ function Header() {
           </div>
         </div>
         <div className="text-white flex justify-end pt-5">
-          <nav className="bg-gray-50 dark:bg-gray-700">
+          <nav className="bg-gray-50 dark:bg-gray-700 header-nav">
             <div className="max-w-screen-xl px-4 py-3 mx-auto">
               <div className="flex items-center">
                 <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                   <li>
                     <NavLink to="/"
-                      className="text-gray-900 dark:text-white hover:underline"
+                      className="font-bold text-gray-900 dark:text-white hover:underline"
                       aria-current="page"
                     >
                       Home
@@ -139,21 +139,21 @@ function Header() {
                   </li>
                   <li>
                     <NavLink to="/movie"
-                      className="text-gray-900 dark:text-white hover:underline"
+                      className="font-bold text-gray-900 dark:text-white hover:underline"
                     >
                       Movie
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/tv"
-                      className="text-gray-900 dark:text-white hover:underline"
+                      className="font-bold text-gray-900 dark:text-white hover:underline"
                     >
                       TV
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/celebrities"
-                      className="text-gray-900 dark:text-white hover:underline"
+                      className="font-bold text-gray-900 dark:text-white hover:underline"
                     >
                       Celebrities
                     </NavLink>

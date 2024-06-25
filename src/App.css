@@ -3,3 +3,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.nested-nav a{
+    border:2px solid transparent;
+    transition: 1s all;
+}
+.nested-nav a.active{
+    border-color:#fff;
+}
+
+.page-item.active{
+    color: #f40b7e;
+}
+
+.header-nav a.active{
+    color: #f40b7e;
+    text-decoration: underline;
+}
