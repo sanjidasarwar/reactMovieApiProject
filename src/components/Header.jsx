@@ -6,7 +6,7 @@ function Header() {
     e.preventDefault()
     const queryTerm=e.target.search.value
     e.target.reset();
-    return navigate(`/search?q=${queryTerm}`)
+    return navigate(`movie/search?q=${queryTerm}`)
   }
   return (
     <header className="absolute top-3 left-0 right-0">

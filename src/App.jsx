@@ -23,6 +23,10 @@ const router = createBrowserRouter(
                 element={<ItemList type="movie" api={`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`} />} />
           <Route path="upcoming" 
                 element={<ItemList type="movie" api={`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`} />} />
+          <Route 
+              path="search" 
+              element={<ItemList type="movie" api={`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}`} />}
+          />
       </Route>
       
       <Route 
@@ -48,10 +52,7 @@ const router = createBrowserRouter(
               path="celebrities/:id" 
               element={<CelebrityDetails />}
           />
-      <Route 
-              path="search" 
-              element={<ItemList type="movie" api={`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}`} />}
-          />
+    
     </Route>
   )
 );

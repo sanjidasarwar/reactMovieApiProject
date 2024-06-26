@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
+import Backup from "../../assets/backup.jpg"
+
 
 function CelebrityDetails() {
     const {id} = useParams()
@@ -9,9 +11,10 @@ function CelebrityDetails() {
     const { data:celebrity } = useFetchData(
         `https://api.themoviedb.org/3/person/popular?api_key=${import.meta.env.VITE_API_KEY}`, details
       );
-      const image = `https://image.tmdb.org/t/p/original/${celebrity?.profile_path}` ;
+      const image = celebrity?.poster_path ? `https://image.tmdb.org/t/p/original/${celebrity?.profile_path}` : Backup ;
+
   
-console.log();
+console.log(celebrity?.known_for);
     return ( 
         <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-sm">
@@ -34,13 +37,13 @@ console.log();
             <span>{celebrity?.popularity}</span>
           </p>
 
-          { celebrity?.known_for ? (
+          {/* { celebrity?.known_for ? ( */}
               <p className="my-7 flex flex-wrap gap-2">
               { celebrity?.known_for.map((item) => (
-                <span className="mr-2 border border-gray-200 rounded dark:border-gray-600 p-2" key={item.id}>{item.title}</span>
+                <span className="mr-2 border border-gray-200 rounded dark:border-gray-600 p-2" key={item.id}>{item.title? item.title :item.name }</span>
               )) }
             </p>
-            ) : "" }
+            {/* ) : "" } */}
 
         </div>
       </section>

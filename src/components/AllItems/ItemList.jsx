@@ -22,7 +22,6 @@ function ItemList({ type, api }) {
     handleNext,
   } = usePagination(items?.results ? items.results : [], 8);
 
-  console.log(items?.results?.length, itemPerPage);
   return (
     <div className="space-y-12">
       {queryTerm && (

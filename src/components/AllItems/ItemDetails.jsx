@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
-import Backup from "../../assets/backup.png"
+import Backup from "../../assets/backup.jpg"
 
 function ItemDetails({type}) {
     const {id} = useParams()
@@ -8,8 +8,6 @@ function ItemDetails({type}) {
         `https://api.themoviedb.org/3/${type}/${id}?api_key=${import.meta.env.VITE_API_KEY}`
       );
       const image = item?.poster_path ? `https://image.tmdb.org/t/p/w500/${item?.poster_path}` : Backup ;
-      console.log(item);
-
     return ( 
         <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-sm">

@@ -1,10 +1,11 @@
 import { IoMdStarOutline  } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
+import Backup from "../../assets/backup.jpg"
 
 function SingleItem({item}) {
     
     const {id, original_title, poster_path, vote_count, vote_average} = item
-    const imgSrc = `https://image.tmdb.org/t/p/original/${poster_path}`
+    const imgSrc = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : Backup ;
 
     return ( 
         <div key={id}>
