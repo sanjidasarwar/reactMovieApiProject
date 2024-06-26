@@ -48,6 +48,10 @@ const router = createBrowserRouter(
               path="celebrities/:id" 
               element={<CelebrityDetails />}
           />
+      <Route 
+              path="search" 
+              element={<ItemList type="movie" api={`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}`} />}
+          />
     </Route>
   )
 );
