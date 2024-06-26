@@ -4,7 +4,7 @@ import SingleItem from "./SingleItem";
 import Pagination from "../Pagination";
 import usePagination from "../../hooks/usePagination";
 import { useSearchParams } from "react-router-dom";
-import {ColorRing} from 'react-loader-spinner';
+import SpinerLoader from "../SpinerLoader";
 
 function ItemList({ type, api }) {
   const [searchParams] = useSearchParams();
@@ -25,17 +25,7 @@ function ItemList({ type, api }) {
   return (
     <>
     {
-      loading ? (
-        <ColorRing
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="color-ring-loading"
-          wrapperStyle={{position:'absolute, top:50%, left:50%, backgroundColor:#000'}}
-          wrapperClass="color-ring-wrapper absolute top-[50%] left-[50%]"
-          colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-          />
-      ) 
+      loading ? (<SpinerLoader />) 
     
       : ( <div className="space-y-12">
         {queryTerm && (
