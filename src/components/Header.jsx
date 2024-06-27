@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -13,7 +13,9 @@ function Header() {
       <div className="md:container md:mx-auto">
         <div className="flex justify-between">
           <div>
-            <h3 className="text-logoColor text-3xl md:text-4xl font-extrabold">Filmix</h3>
+            <h3 className="text-logoColor text-3xl md:text-4xl font-extrabold">
+              <Link to="/">Filmix</Link>
+            </h3>
           </div>
           <div className="flex">
             <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
