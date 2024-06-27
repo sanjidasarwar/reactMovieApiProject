@@ -11,7 +11,7 @@ function VideoSection() {
           return id
         }
         const { data:fetchedMovieId } = useFetchData(
-          "https://api.themoviedb.org/3/discover/movie?api_key=38c57f89d17a1b837156825f22ed589a", getMovieId
+          `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`, getMovieId
         );
 
         const [moviesId, setMoviesId] = useState([])
