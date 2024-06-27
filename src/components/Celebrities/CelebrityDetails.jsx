@@ -14,7 +14,7 @@ function CelebrityDetails() {
       const image = celebrity?.poster_path ? `https://image.tmdb.org/t/p/original/${celebrity?.profile_path}` : Backup ;
 
   
-console.log(celebrity?.known_for);
+
     return ( 
         <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-lg">

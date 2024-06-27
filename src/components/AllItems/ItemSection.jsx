@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from "react-router-dom";
-import ItemList from "./ItemList";
 import ItemNav from "./ItemNav";
 
 function ItemSection({title}) {

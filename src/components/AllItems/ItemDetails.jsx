@@ -3,18 +3,20 @@ import useFetchData from "../../hooks/useFetchData";
 import Backup from "../../assets/backup.jpg"
 
 function ItemDetails({type}) {
+  
     const {id} = useParams()
     const { data:item } = useFetchData(
         `https://api.themoviedb.org/3/${type}/${id}?api_key=${import.meta.env.VITE_API_KEY}`
       );
       const image = item?.poster_path ? `https://image.tmdb.org/t/p/w500/${item?.poster_path}` : Backup ;
+
     return ( 
         <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-lg">
           <img className="rounded" src={image} alt={item?.title} />
         </div>
         <div className="max-w-2xl text-white text-lg px-8 md:px-0">
-          <h1 className="text-4xl font-bold my-3">{item?.title}</h1>
+          <h1 className="text-4xl font-bold my-3">{item?.title ? item.title : item?.name}</h1>
           <p className="my-4">{item?.overview}</p>
             { item?.genres ? (
               <p className="my-7 flex flex-wrap gap-2">
