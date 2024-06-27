@@ -6,7 +6,7 @@ function RootLayout() {
   return (
     <>
       <Hero />
-      <main className="bg-[#13161F]">
+      <main className="bg-themeColor">
         <Outlet />
       </main>
       <Footer />

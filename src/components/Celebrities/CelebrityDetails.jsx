@@ -17,11 +17,11 @@ function CelebrityDetails() {
 console.log(celebrity?.known_for);
     return ( 
         <section className="flex justify-around flex-wrap py-5">
-        <div className="max-w-sm">
+        <div className="max-w-lg">
           <img className="rounded" src={image} alt={celebrity?.name} />
         </div>
-        <div className="max-w-2xl text-white text-lg dark:text-white">
-          <h3 className="text-4xl font-bold my-3 text-center lg:text-left">{celebrity?.name}</h3>
+        <div className="max-w-2xl text-white text-lg">
+          <h3 className="text-4xl font-bold my-3">{celebrity?.name}</h3>
           <p className="my-4">
             <span className="mr-2 font-bold">Gender:</span>
             <span>{celebrity?.gender ==1 ? 'Female': 'Male' }</span>

@@ -29,15 +29,15 @@ function ItemList({ type, api }) {
     
       : ( <div className="space-y-12">
         {queryTerm && (
-          <p className="text-2xl text-white dark:text-white">
+          <p className="text-2xl text-white">
             {items?.results?.length === 0
               ? `No result found for '${queryTerm}'`
               : `Result for '${queryTerm}'`}
           </p>
         )}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
           {currentData.map((item) => (
-            <Link to={`/${type}/${item.id}`} key={item.id}>
+            <Link to={`/${type}/${item.id}`} key={item.id} className="sm:mx-auto">
               <SingleItem item={item} key={item.id} />
             </Link>
           ))}

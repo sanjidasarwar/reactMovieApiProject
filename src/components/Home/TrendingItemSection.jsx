@@ -27,19 +27,21 @@ function TrendingItemSection({ type, title }) {
   }, [items])
 
   return (
-    <section className="md:container md:mx-auto py-8">
+    <section className="mx-10 md:container mx-auto py-8">
       <div className="sectionHead flex justify-between mb-8">
         <h3 className="text-2xl font-bold text-white relative after:content-[''] after:absolute after:top-8 after:left-0 after:w-16 after:h-1 after:bg-white">
           {title}
         </h3>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 md:gap-4">
         {itemToShow?.map((item) => (
-          <Link to={`/${type}/${item.id}`} key={item.id}>
+          <Link to={`/${type}/${item.id}`} key={item.id} className="sm:mx-auto">
             <SingleItem item={item} key={item.id} />
           </Link>
         ))}
-        <div className="flex justify-center mt-5">
+        
+      </div>
+      <div className="flex justify-center mt-5">
           <button
             className="inline-flex p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
             onClick={loadMoreData}
@@ -49,7 +51,6 @@ function TrendingItemSection({ type, title }) {
             </span>
           </button>
         </div>
-      </div>
     </section>
   );
 }
