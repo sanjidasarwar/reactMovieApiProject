@@ -15,11 +15,13 @@ import CelebrityDetails from "./components/Celebrities/CelebrityDetails";
 import ItemList from "./components/AllItems/ItemList";
 import ItemSection from "./components/AllItems/ItemSection.jsx";
 import { PageNotFound } from "./pages/PageNotFound.jsx";
+import MovieListError from "./components/MovieListError"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<RootLayout />} errorElement={<MovieListError />}>
         <Route index element={<Home />} />
         <Route path="movie" element={<ItemSection title="All Movies" />}>
           <Route

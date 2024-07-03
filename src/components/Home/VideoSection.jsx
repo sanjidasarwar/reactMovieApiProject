@@ -45,14 +45,14 @@ function VideoSection() {
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
               
                 {videosToShow.map((videoArray, index) => (
-                    <SwiperSlide key={videoArray[0].id}>
+                    <SwiperSlide key={videoArray[0]?.id}>
                       {videoArray.length > 0 ? (
                           
                       <iframe height="415" className="w-full"
-                      src={`https://www.youtube.com/embed/${videoArray[0].key}`}>
+                      src={`https://www.youtube.com/embed/${videoArray[0]?.key}`}>
                       </iframe>
                           ) : (
-                          <p>No video available for {videoArray[index].name}</p>
+                          <p>No video available for {videoArray[index]?.name}</p>
                           )}
                     </SwiperSlide>
                 ))}
