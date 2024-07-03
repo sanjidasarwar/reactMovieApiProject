@@ -2,7 +2,7 @@ import { Link, useRouteError } from "react-router-dom";
 
 function MovieListError() {
     const error = useRouteError();
-    console.log(error);
+
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
             <div className="text-center">
